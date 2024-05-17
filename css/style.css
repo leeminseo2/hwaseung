@@ -249,6 +249,9 @@
 }
 .foot-family {
   background: #55f;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 .family-site {
   border: 1px solid #fff;
@@ -283,4 +286,26 @@
   font-weight: 200;
   font-size: 1.4rem;
   color: #fff;
+}
+.policy-list {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+.policy-list li a {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.sns-list {
+  margin-top: 12.6rem;
+}
+.sns-list > a {
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: #f00 nop 50%;
+}
+.sns-list > a.instagram {
+  background-image: url();
 }
