@@ -1,4 +1,5 @@
 $(function () {
+  const $window = $(window);
   const $header = $('#header');
   const $menu = $('.gnb > li');
   const $submenu = $('.submenu-wrap');
@@ -34,7 +35,21 @@ $(function () {
     $submenu.stop().fadeOut(duration);
     $banner.stop().fadeOut(duration);
   }
-  // family site
+
+  // 스크롤 이벤트
+  $window.on('scroll', function () {
+    // 얼마나 스크롤 되었는지
+    const scrollTop = $(this).scrollTop();
+    // 비주얼 영역의 세로크기 저장
+    const visualHeight = $('.visual').outerHeight();
+    console.log(scrollTop, visualHeight);
+    // 두 값을 비교해서 (스크롤 값이 비주얼 영역보다 세로 보다 크다면=비주얼 영역을 지난다)
+    if (scrollTop >= visualHeight) {
+      $header.addClass('w-bg');
+    } else {
+      $header.removeClass('w-bg');
+    }
+  }); // family site
   $('.family-site select').on('change', function () {
     const linkValue = $(this).val();
     window.open(linkValue);
