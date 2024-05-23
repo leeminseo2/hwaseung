@@ -6,6 +6,9 @@
   --title-color: #111;
   --text-color: #333;
 }
+a {
+  text-decoration: none;
+}
 a:hover {
   text-decoration: none;
   color: var(--main-color);
