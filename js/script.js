@@ -6,6 +6,20 @@ $(function () {
   const $banner = $('.banner-slide');
   const $btnMenu = $('.btn-menu');
   const duration = 300;
+  // 모바일
+  const $btnMmenu = $('.btn-m-menu');
+  const $mSubmenu = $('.m-submenu-wrap');
+  const $dim = $('.dim');
+  const $btnClose = $('.btn-close');
+
+  $btnMenu.on('click', function () {
+    $mSubmenu.addClass('active');
+    $dim.fadeIut(duration);
+  });
+  $btnClose.on('click', function () {
+    $mSubmenu.removeClass('active');
+    $dim.fadeOut(duration);
+  });
   // 마우스가 메뉴에 들어오면(mouseenter)
   $menu.on('mouseenter', function () {
     const menuIdx = $(this).index();
